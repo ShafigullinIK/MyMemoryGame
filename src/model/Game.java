@@ -11,6 +11,10 @@ public class Game {
         this.timer = timer;
     }
 
+    public void start(){
+        new Thread(timer).start();
+    }
+
     public Player getPlayer() {
         return player;
     }

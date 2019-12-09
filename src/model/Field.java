@@ -12,6 +12,7 @@ public class Field {
             throw new CountOfCellsIsOddException();
         }
         cells = new Cell[height][width];
+        init();
     }
 
     public void init() {
