@@ -43,4 +43,8 @@ public class Field {
         }
         return array;
     }
+
+    public Cell[][] getCells() {
+        return cells;
+    }
 }

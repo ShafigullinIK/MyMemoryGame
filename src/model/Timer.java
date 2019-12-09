@@ -23,4 +23,8 @@ public class Timer implements Runnable {
             time--;
         }
     }
+
+    public int getTime() {
+        return time;
+    }
 }
