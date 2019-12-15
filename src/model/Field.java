@@ -22,17 +22,17 @@ public class Field {
         for (int i = 0; i < countOfCells; i++) {
             values[i] = i % countOfValues;
         }
-        values = shuffle(values);
+        shuffle(values);
         int index = 0;
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells[0].length; j++) {
-                cells[i][j] = new Cell(index);
+                cells[i][j] = new Cell(values[index]);
                 index++;
             }
         }
     }
 
-    private int[] shuffle(int[] array) {
+    private void shuffle(int[] array) {
         Random r = new Random();
         for (int j = 0; j < r.nextInt(10) + 2; j++) {
             for (int i = 0; i < array.length; i++) {
@@ -42,7 +42,6 @@ public class Field {
                 array[index] = temp;
             }
         }
-        return array;
     }
 
     public Cell[][] getCells() {
